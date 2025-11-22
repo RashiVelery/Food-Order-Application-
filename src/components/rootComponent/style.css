@@ -1,0 +1,92 @@
+header{
+    background-color: rgb(255, 0, 0);
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0px;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+.navbar ul li {
+    cursor: pointer;
+}
+.navItems{
+    display: flex;
+    list-style: none ;
+    gap: 30px;
+    font-size: 20px;
+    color: white;
+    padding-top: 6px;
+}
+.navItems li:hover{
+    color: black;
+}
+.navLogo{
+    font-size: 35px;
+    font-weight: 500;
+}
+.navIcons{
+    display: flex;
+    gap: 35px;
+    cursor: pointer;
+    color: #eff542;
+}
+
+.cartItem:hover{
+    color: black;  
+}
+.darkMode:hover{
+    color: black;
+}
+.navItems .active{
+    padding-bottom: 2px;
+    border-bottom: solid 2px black;
+}
+footer{
+    background-color:rgb(255, 0, 0);
+    margin-top: 20px;
+}
+.footerDetails{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 130px;
+    color: white;
+    width: 80%;
+    margin: auto;
+    padding-top: 25px;
+    cursor: pointer;
+}
+.email{
+    display: flex;
+    gap: 10px;
+}
+.emailIcon{
+    padding-top: 7px;
+}
+.phone{
+    display: flex;
+    gap: 10px;
+}
+.phoneIcon{
+    padding-top: 7px;
+}
+.logoIcon{
+    padding-bottom: 15px;
+}
+.facebook{
+   display: flex;
+    gap: 10px; 
+}
+.facebookIcon{
+    padding-top: 7px;
+}
+.instagram{
+    display: flex;
+    gap: 10px; 
+}
+.instagramIcon{
+    padding-top: 7px;
+}
