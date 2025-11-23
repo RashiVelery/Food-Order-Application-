@@ -5,6 +5,11 @@ import './menu.css'
 import Search from './Search'
 import Desserts from './Desserts'
 import Juice from './Juice'
+import { useContext } from "react";
+
+
+
+
 
 
 function Menu() {

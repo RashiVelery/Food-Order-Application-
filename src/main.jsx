@@ -15,6 +15,7 @@ import Cart from "./components/cart/Cart.jsx";
 import Checkout from "./components/Checkout.jsx";
 import Contact from "./components/Contact.jsx";
 
+
 const router = createBrowserRouter([
   {
     path: "/",

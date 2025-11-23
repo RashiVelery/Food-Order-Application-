@@ -20,7 +20,7 @@ function Root() {
             <header>
                 <nav className='navbar'>
                     <div>
-                        <span className='navLogo text-[black]'>Quicker<span className='text-[#eff542]'>Eats.</span></span>
+                        <span className='navLogo text-[black]'>Quicker<span className='text-[red]'>Eats.</span></span>
                     </div>
                     <div>
                         <ul className='navItems'>
@@ -34,7 +34,7 @@ function Root() {
                                 className={activePath === "/menu" ? "active" : ""}
                                 onClick={() => navigate("/menu")}
                             >
-                                menu
+                                Menu
                             </li>
 
                             <li
@@ -79,7 +79,7 @@ function Root() {
                 <div className='footerDetails'>
                     <div>
                         <div className='logoIcon'>
-                            <span className=' text-[black] text-[20px] font-[500]'>Quicker<span className='text-[#eff542]'>Eats.</span></span>
+                            <span className=' text-[black] text-[20px] font-[500]'>Quicker<span className='text-[red]'>Eats.</span></span>
                         </div>
                         <div className='email'>
                             <div className='emailIcon'>

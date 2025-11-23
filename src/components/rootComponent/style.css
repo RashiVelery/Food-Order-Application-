@@ -1,5 +1,5 @@
 header{
-    background-color: rgb(255, 0, 0);
+    background-color:rgb(247, 240, 196) ;
 }
 
 .navbar{
@@ -18,42 +18,43 @@ header{
     list-style: none ;
     gap: 30px;
     font-size: 20px;
-    color: white;
+    font-weight: 500;
+    color: red;
     padding-top: 6px;
 }
 .navItems li:hover{
     color: black;
 }
 .navLogo{
-    font-size: 35px;
+    font-size: 45px;
     font-weight: 500;
 }
 .navIcons{
     display: flex;
     gap: 35px;
     cursor: pointer;
-    color: #eff542;
+    color:black;
 }
 
 .cartItem:hover{
     color: black;  
 }
 .darkMode:hover{
-    color: black;
+    color: red;
 }
 .navItems .active{
     padding-bottom: 2px;
     border-bottom: solid 2px black;
 }
 footer{
-    background-color:rgb(255, 0, 0);
+    background-color:rgb(247, 240, 196) ;
     margin-top: 20px;
 }
 .footerDetails{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 130px;
-    color: white;
+    color: red;
     width: 80%;
     margin: auto;
     padding-top: 25px;

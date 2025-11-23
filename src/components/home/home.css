@@ -38,8 +38,8 @@
 }
 
 #button {
-    background-color: red;
-    color: #eff542;
+    background-color:rgb(247, 240, 196) ;
+    color:red;
     border-radius: 5px;
     padding: 5px;
     font-size: 20px;
@@ -47,6 +47,7 @@
     margin-bottom: 10px;
     height: 50px;
     width: 150px;
+    border: 1px solid black;
 }
 
 #button:hover {
