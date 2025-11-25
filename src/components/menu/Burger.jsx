@@ -47,7 +47,7 @@ function Burger() {
                     )
                    })}
                 </div>
-                <hr />
+                <hr className='line' />
             </section>
         </>
     )

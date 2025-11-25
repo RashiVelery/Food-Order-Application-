@@ -1,9 +1,15 @@
 import React from 'react'
+import { AddProductToCart } from '../../features/cart/cartSlice';
+import { useSelector } from 'react-redux';
+
 
 function Details() {
+
+ 
+
   return (
     <div>
-      <p className='text-center items-center flex'>No Items Added to the Cart</p>
+
     </div>
   )
 }

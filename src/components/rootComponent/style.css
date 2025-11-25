@@ -1,93 +1,337 @@
-header{
-    background-color:rgb(247, 240, 196) ;
+:root {
+
+    --color1: rgb(250, 238, 214);
+    --color2: red;
+    --color3: black;
+    --color4: white;
+    --color5: rgb(250, 243, 243);
+    --color6: rgb(255, 255, 255);
+    --color7: #eff542;
+    --textcolor: black;
+    --bgcolor: white;
+    --header: rgb(250, 238, 214);
+    --search: white;
 }
 
-.navbar{
+body {
+    background-color: var(--bgcolor);
+}
+
+
+
+header {
+    background-color: var(--header);
+}
+
+.navbar {
     display: flex;
     justify-content: space-between;
     padding: 20px 0px;
     align-items: center;
-    width: 80%;
+    width: 90%;
     margin: auto;
 }
+
 .navbar ul li {
     cursor: pointer;
 }
-.navItems{
+
+.navItems {
     display: flex;
-    list-style: none ;
+    list-style: none;
     gap: 30px;
     font-size: 20px;
     font-weight: 500;
-    color: red;
+    color: var(--color2);
     padding-top: 6px;
 }
-.navItems li:hover{
-    color: black;
+
+.navItems li:hover {
+    color: var(--color3);
 }
-.navLogo{
+
+.navLogo {
     font-size: 45px;
     font-weight: 500;
 }
-.navIcons{
+
+.navIcons {
     display: flex;
     gap: 35px;
     cursor: pointer;
-    color:black;
+    color: var(--color3);
 }
 
-.cartItem:hover{
-    color: black;  
+.cartItem:hover {
+    color: var(--color3);
 }
-.darkMode:hover{
-    color: red;
+
+.store :hover {
+    color: var(--color2);
 }
-.navItems .active{
+
+.darkmode :hover {
+    color: var(--color2);
+}
+
+.navItems .active {
     padding-bottom: 2px;
-    border-bottom: solid 2px black;
+    border-bottom: solid 2px var(--color3);
 }
-footer{
-    background-color:rgb(247, 240, 196) ;
+
+footer {
+    background-color: var(--header);
     margin-top: 20px;
 }
-.footerDetails{
+
+.footerDetails {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 130px;
-    color: red;
+    color: var(--color2);
     width: 80%;
     margin: auto;
     padding-top: 25px;
     cursor: pointer;
 }
-.email{
+
+.email {
     display: flex;
     gap: 10px;
 }
-.emailIcon{
+
+.emailIcon {
     padding-top: 7px;
 }
-.phone{
+
+.phone {
     display: flex;
     gap: 10px;
 }
-.phoneIcon{
+
+.phoneIcon {
     padding-top: 7px;
 }
-.logoIcon{
+
+.logoIcon {
     padding-bottom: 15px;
 }
-.facebook{
-   display: flex;
-    gap: 10px; 
-}
-.facebookIcon{
-    padding-top: 7px;
-}
-.instagram{
+
+.facebook {
     display: flex;
-    gap: 10px; 
+    gap: 10px;
 }
-.instagramIcon{
+
+.facebookIcon {
     padding-top: 7px;
+}
+
+.instagram {
+    display: flex;
+    gap: 10px;
+}
+
+.instagramIcon {
+    padding-top: 7px;
+}
+
+.cartCount {
+    height: 15px;
+    width: 15px;
+    background-color: var(--color2);
+    border-radius: 100%;
+    margin-left: 22px;
+    position: absolute;
+    font-size: 10px;
+    color: var(--color4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* menu.css */
+
+
+.pizzaContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+.burgerContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+.searchBar {
+    background-color: white;
+    border: 1px solid black;
+}
+
+.searchBar:hover {
+    background-color: var(--color5);
+}
+
+.itemsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+#filterBar {
+
+    height: 35px;
+    color: black;
+    background-color: white;
+    margin-top: 15px;
+    margin-left: 10px;
+    width: 70px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+#filterBar:hover {
+    background-color: var(--color5);
+}
+
+.cardDetails {
+    height: 400px;
+    overflow: hidden;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+
+
+.cardDetails :hover {
+    background-color: var(--header);
+
+}
+
+.cardDetails img {
+    height: 200px;
+}
+
+
+/* home.css */
+
+
+.title1 {
+    color: var(--color6);
+    font-weight: 700;
+    font-size: 55px;
+    padding-bottom: 25px;
+}
+
+.paragraph1 {
+    color: var(--color7);
+    font-size: 20px;
+    padding-bottom: 25px;
+}
+
+.title2 {
+    color: var(--color6);
+    font-weight: 700;
+    font-size: 55px;
+    padding-bottom: 25px;
+}
+
+.paragraph2 {
+    color: var(--color7);
+    font-size: 20px;
+    padding-bottom: 25px;
+}
+
+.title3 {
+    color: var(--color6);
+    font-weight: 700;
+    font-size: 55px;
+    padding-bottom: 25px;
+}
+
+.paragraph3 {
+    color: var(--color7);
+    font-size: 20px;
+    padding-bottom: 25px;
+}
+
+#button {
+    background-color: var(--header);
+    color: var(--color2);
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    height: 50px;
+    width: 150px;
+    border: 1px solid var(--color3);
+}
+
+#button:hover {
+    background-color: var(--color3);
+}
+
+section {
+    width: 80%;
+    margin: auto;
+}
+
+.subHeading {
+    color: var(--color2);
+}
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    width: 80%;
+    margin: auto;
+    line-height: 25px;
+    padding-top: 55px;
+    color: var(--textcolor);
+}
+
+.line {
+    color: var(--textcolor);
+}
+
+.Heading {
+    color: var(--textcolor);
+}
+
+.navLogo {
+    color: black;
+
+}
+
+.caroselItem {
+    border-radius: 45px;
+    overflow: hidden;
+}
+
+.cardButton {
+    position: sticky;
+}
+
+.signUp {
+    height: 35px;
+    width: 100px;
+    background-color: rgb(249, 245, 226);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    color: red;
+    border: 1px solid black;
+    font-weight: 500;
+    padding-top: 4px;
+}
+
+.signUp:hover {
+    background-color: rgb(241, 213, 180);
 }

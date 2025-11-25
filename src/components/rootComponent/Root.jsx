@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Outlet, useLocation, useNavigate } from 'react-router-dom'
 import './style.css';
-
+import { useDispatch, useSelector } from 'react-redux';
+import Login from '../../Login/Login';
 
 
 
@@ -15,12 +16,46 @@ function Root() {
     const activePath = location.pathname
 
 
+    const cart = useSelector(state => state.cart.value)
+
+    const [darkmode, setDarkmode] = useState(false);
+    const handleDarkmode = () => {
+        setDarkmode(!darkmode)
+    }
+
+    useEffect(() => {
+
+        const root = document.documentElement;
+
+        if (darkmode) {
+            root.style.setProperty('--textcolor', 'black')
+            root.style.setProperty('--bgcolor', 'white')
+            root.style.setProperty('--header', 'hsla(40, 78%, 91%, 1.00)')
+            root.style.setProperty('--search', 'black')
+            root.style.setProperty("--button", 'rgba(248, 228, 187, 1)')
+
+        }
+        else {
+            root.style.setProperty('--textcolor', 'white')
+            root.style.setProperty('--bgcolor', 'black')
+            root.style.setProperty('--header', 'rgba(207, 205, 205, 1)')
+            root.style.setProperty('--search', 'white')
+            root.style.setProperty("--button", 'rgba(173, 171, 171, 1)')
+
+        }
+
+    }, [darkmode])
+
+    const [showLogin, setShowLogin] = useState(false)
+
+
     return (
         <>
+            {showLogin ? <Login setShowLogin={setShowLogin} /> : <></>}
             <header>
                 <nav className='navbar'>
                     <div>
-                        <span className='navLogo text-[black]'>Quicker<span className='text-[red]'>Eats.</span></span>
+                        <span className='navLogo'>Quicker<span className='text-[red]'>Eats.</span></span>
                     </div>
                     <div>
                         <ul className='navItems'>
@@ -60,18 +95,33 @@ function Root() {
                     </div>
                     <div>
                         <div className='navIcons'>
-                            <div className='darkMode'>
+                            <div className=' cartCount ' >{cart.length}</div>
+
+                            <div className='store'>
+
                                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16" className={activePath === "/cart" ? "active" : ""}
                                     onClick={() => navigate("/cart")}>
 
                                     <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
                                 </svg>
+
                             </div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-sun-fill" viewBox="0 0 16 16" className='darkMode'>
-                                <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708" />
-                            </svg>
+                            <div className='darkmode' onClick={handleDarkmode}>
+                                {darkmode ? <i><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-sun-fill" viewBox="0 0 16 16" >
+
+                                    <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708" />
+                                </svg></i> : <i><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-moon-fill" viewBox="0 0 16 16" >
+                                    <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278" />
+                                </svg></i>}
+
+                            </div>
+                            <div className='signUp' onClick={() => setShowLogin(true)}>
+                                Sign up
+                            </div>
+
                         </div>
                     </div>
+
                 </nav>
             </header>
             <Outlet />

@@ -1,7 +1,6 @@
 import React from 'react'
 import Burger from './Burger'
 import Pizza from './Pizza'
-import './menu.css'
 import Search from './Search'
 import Desserts from './Desserts'
 import Juice from './Juice'

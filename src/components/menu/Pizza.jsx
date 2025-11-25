@@ -66,7 +66,7 @@ function Pizza() {
     return (
         <>
             <section>
-                <h1>Catogories</h1>
+                <h1 className='Heading'>Catogories</h1>
                 <h3 className='subHeading'>Pizzas</h3>
                 <div className='pizzaContainer' >
 
@@ -76,7 +76,7 @@ function Pizza() {
                         )
                     })}
                 </div>
-                <hr />
+                <hr className='line'/>
             </section>
 
         </>

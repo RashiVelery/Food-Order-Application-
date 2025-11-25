@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Carousel from 'react-bootstrap/Carousel';
-import './home.css';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Pizza from '../menu/Pizza';
@@ -24,49 +23,53 @@ function Home() {
 
     return (
         <>
-            <Carousel>
+            <section>
+                <div>
+                <Carousel className='  pt-[25px]'>
 
-                <Carousel.Item>
-                    <img src="https://images.pexels.com/photos/1099680/pexels-photo-1099680.jpeg" alt="" />
-                    <Carousel.Caption>
-                        <h1 className='title1'>Fresh. Fast. Delicious.</h1>
-                        <p className='paragraph1'>Your favorite meals delivered hot and fast — anytime, anywhere.</p>
+                    <Carousel.Item className='caroselItem'>
+                        <img src="https://images.pexels.com/photos/1099680/pexels-photo-1099680.jpeg" alt="" />
+                        <Carousel.Caption>
+                            <h1 className='title1'>Fresh. Fast. Delicious.</h1>
+                            <p className='paragraph1'>Your favorite meals delivered hot and fast — anytime, anywhere.</p>
 
-                        <button className={home === "menu" ? "active" : ""} onClick={() => navigate("/menu")} id='button'>Order now</button>
+                            <button className={home === "menu" ? "active" : ""} onClick={() => navigate("/menu")} id='button'>Order now</button>
 
 
-                    </Carousel.Caption>
-                </Carousel.Item>
+                        </Carousel.Caption>
+                    </Carousel.Item>
 
-                <Carousel.Item>
-                    <img src="https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg" alt="" />
-                    <Carousel.Caption>
-                        <h1 className='title2'>Stacked With Flavor</h1>
-                        <p className='paragraph2'>Enjoy fluffy, golden pancakes topped with fresh fruits and rich caramel. Taste happiness in every bite.</p>
+                    <Carousel.Item className='caroselItem'>
+                        <img src="https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg" alt="" />
+                        <Carousel.Caption>
+                            <h1 className='title2'>Stacked With Flavor</h1>
+                            <p className='paragraph2'>Enjoy fluffy, golden pancakes topped with fresh fruits and rich caramel. Taste happiness in every bite.</p>
 
-                        <button className={home === "menu" ? "active" : ""} onClick={() => navigate("/menu")} id='button' >
-                            Order now
-                        </button>
+                            <button className={home === "menu" ? "active" : ""} onClick={() => navigate("/menu")} id='button' >
+                                Order now
+                            </button>
 
-                    </Carousel.Caption>
-                </Carousel.Item>
+                        </Carousel.Caption>
+                    </Carousel.Item>
 
-                <Carousel.Item>
-                    <img src="https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg" alt="" />
-                    <Carousel.Caption>
-                        <h1 className='title3'>Made With Fresh Ingredients</h1>
-                        <p className='paragraph3'>
-                            We prepare every dish with handpicked ingredients to serve you pure quality.
-                        </p>
+                    <Carousel.Item className='caroselItem'>
+                        <img src="https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg" alt="" />
+                        <Carousel.Caption>
+                            <h1 className='title3'>Made With Fresh Ingredients</h1>
+                            <p className='paragraph3'>
+                                We prepare every dish with handpicked ingredients to serve you pure quality.
+                            </p>
 
-                        <button className={home === "menu" ? "active" : ""} onClick={() => navigate("/menu")} id='button' >
-                            Order now
-                        </button>
+                            <button className={home === "menu" ? "active" : ""}  onClick={() => navigate("/menu")} id='button' >
+                                Order now
+                            </button>
 
-                    </Carousel.Caption>
-                </Carousel.Item>
-                
-            </Carousel>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+
+                </Carousel>
+                </div>
+            </section>
 
             <div className='about'>
                 <div>

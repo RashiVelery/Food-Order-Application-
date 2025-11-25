@@ -1,0 +1,74 @@
+:root{
+    --header:rgb(250, 238, 214);
+    --button:rgb(249, 232, 199);
+}
+
+.login{
+    position:absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: #00000090;
+    display: grid;
+}
+.loginContainer{
+    place-self: center;
+    width: max(23vw,330px);
+    color: #808080;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding:25px 30px;
+    border-radius: 8px;
+    font-size: 14px;
+    animation: fadeIn 0.5s;
+}
+.loginTitle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+}
+.loginTitle svg{
+    width: 16px;
+    cursor: pointer;
+}
+
+.loginInput{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.loginInput input{
+    outline: none;
+    border: 1px solid #c9c9c9;
+    padding: 10px;
+    border-radius: 4px;
+}
+.loginContainer button{
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    color:black;
+    background-color:var(--header) ;
+    font-size: 15px;
+    cursor: pointer;
+}
+.loginContainer button:hover{
+    background-color: var(--button);
+}
+.loginCondition{
+    display: flex;
+    align-items: start;
+    gap: 8px;
+    margin-top: -15px;
+}
+.loginCondition input{
+    margin-top: 5px;
+}
+.login p span{
+    font-weight: 500;
+    color: blue;
+    cursor: pointer;
+}

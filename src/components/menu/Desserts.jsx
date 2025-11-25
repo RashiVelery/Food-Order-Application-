@@ -48,7 +48,7 @@ function Desserts() {
                         )
                     })}
                 </div>
-                <hr />
+                < hr className='line' />
             </section>
         </>
     )
