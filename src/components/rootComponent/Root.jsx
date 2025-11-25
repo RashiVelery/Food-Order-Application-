@@ -28,19 +28,20 @@ function Root() {
         const root = document.documentElement;
 
         if (darkmode) {
-            root.style.setProperty('--textcolor', 'black')
-            root.style.setProperty('--bgcolor', 'white')
-            root.style.setProperty('--header', 'hsla(40, 78%, 91%, 1.00)')
-            root.style.setProperty('--search', 'black')
-            root.style.setProperty("--button", 'rgba(248, 228, 187, 1)')
-
-        }
-        else {
             root.style.setProperty('--textcolor', 'white')
             root.style.setProperty('--bgcolor', 'black')
             root.style.setProperty('--header', 'rgba(207, 205, 205, 1)')
             root.style.setProperty('--search', 'white')
             root.style.setProperty("--button", 'rgba(173, 171, 171, 1)')
+
+        }
+        else {
+
+            root.style.setProperty('--textcolor', 'black')
+            root.style.setProperty('--bgcolor', 'white')
+            root.style.setProperty('--header', 'hsla(40, 78%, 91%, 1.00)')
+            root.style.setProperty('--search', 'black')
+            root.style.setProperty("--button", 'rgba(248, 228, 187, 1)')
 
         }
 
