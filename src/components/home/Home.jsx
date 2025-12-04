@@ -5,13 +5,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Pizza from '../menu/Pizza';
 import Burger from '../menu/Burger';
-
-
-
-
-
-
-
+import "./home.css"
 
 
 
@@ -20,6 +14,12 @@ function Home() {
     const [home, setHome] = useState("menu")
 
     const navigate = useNavigate();
+
+    const handleOrderNow = () => {
+    navigate('/menu');
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    
+  };
 
     return (
         <>
@@ -33,7 +33,7 @@ function Home() {
                             <h1 className='title1'>Fresh. Fast. Delicious.</h1>
                             <p className='paragraph1'>Your favorite meals delivered hot and fast — anytime, anywhere.</p>
 
-                            <button className={home === "menu" ? "active" : ""} onClick={() => navigate("/menu")} id='button'>Order now</button>
+                            <button className={home === "menu" ? "active" : ""} onClick={handleOrderNow} id='button'>Order now</button>
 
 
                         </Carousel.Caption>

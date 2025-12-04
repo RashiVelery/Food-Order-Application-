@@ -1,0 +1,78 @@
+.about {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 16px;
+  line-height: 1.6;
+}
+
+/* Hero: two text columns */
+.about-hero {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+  margin-bottom: 32px;
+  margin-right: 10px;
+}
+
+.about-hero-text h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.about-hero-text h2 {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+}
+
+/* Image row: keep same height, center in page */
+.about-images {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.about-images img {
+  width: 100%;
+  max-width: 360px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 14px;
+  display: block;
+}
+
+/* Beliefs card centered and narrower */
+.about-beliefs {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  padding: 18px 20px;
+  background: #f6e2d1;
+  border-radius: 14px;
+margin-left: 10px;
+color: black;
+}
+
+.about-beliefs h2 {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+}
+
+.about-beliefs p {
+  margin: 4px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .about-images {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-images img {
+    max-width: 100%;
+  }
+}

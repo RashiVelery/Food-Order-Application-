@@ -1,0 +1,158 @@
+:root {
+
+    --color1: rgb(250, 238, 214);
+    --color2: red;
+    --color3: black;
+    --color4: white;
+    --color5: rgb(250, 243, 243);
+    --color6: rgb(255, 255, 255);
+    --color7: #eff542;
+    --textcolor: black;
+    --bgcolor: white;
+    --header: rgb(250, 238, 214);
+    --search: white;
+}
+
+
+
+
+
+.searchBar {
+    background-color: white;
+    border: 1px solid black;
+    margin-top: 15px;
+}
+
+.searchBar:hover {
+    background-color: var(--color5);
+}
+
+.itemsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+#filterBar {
+
+    height: 35px;
+    color: black;
+    background-color: white;
+    margin-top: 15px;
+    margin-left: 10px;
+    width: 180px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+#filterBar:hover {
+    background-color: var(--color5);
+}
+
+.cardDetails {
+    overflow: hidden;
+    border-radius: 25px;
+    cursor: pointer;
+    height: auto;
+    min-height: 320px;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+
+
+.cardDetails :hover {
+    background-color: var(--header);
+
+}
+
+.cardDetails img {
+    height: 200px;
+}
+
+
+.searchContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+.detailsImage {
+    height: 450px;
+    width: 450px;
+    display: block;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.detailsImage img {
+    border-radius: 20px;
+}
+
+.detailsDiscription {
+    text-align: center;
+    color: var(--textcolor);
+
+}
+
+.detailsButton {
+    display: flex;
+    justify-content: space-between;
+    margin-inline: 400px;
+}
+
+.detailsButton2 {
+    height: 35px;
+    width: 120px;
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px black;
+}
+
+.detailsButton2:hover {
+    background-color: rgb(3, 3, 178);
+}
+
+.detailsButton1 {
+    height: 35px;
+    width: 120px;
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px black;
+}
+
+.detailsButton1:hover {
+    background-color: rgb(3, 3, 178);
+}
+
+/* Tablets */
+@media (min-width: 600px) {
+  .searchbarDiv {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .searchBar {
+    max-width: 360px;
+  }
+
+  .itemsContainer {
+    grid-template-columns: repeat(2, minmax(0, 1fr));  /* 2 cards */
+    gap: 16px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .itemsContainer {
+    grid-template-columns: repeat(4, minmax(0, 1fr));  /* 4 cards */
+  }
+
+  .cardDetails img {
+    height: 200px;
+  }
+}

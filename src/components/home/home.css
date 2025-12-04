@@ -1,0 +1,195 @@
+:root {
+
+    --color1: rgb(250, 238, 214);
+    --color2: red;
+    --color3: black;
+    --color4: white;
+    --color5: rgb(250, 243, 243);
+    --color6: rgb(255, 255, 255);
+    --color7: #eff542;
+    --textcolor: black;
+    --bgcolor: white;
+    --header: rgb(250, 238, 214);
+    --search: white;
+}
+
+
+
+.title1 {
+    color: var(--color6);
+    font-weight: 700;
+    font-size: 55px;
+    padding-bottom: 25px;
+}
+
+.paragraph1 {
+    color: var(--color7);
+    font-size: 20px;
+    padding-bottom: 25px;
+}
+
+.title2 {
+    color: var(--color6);
+    font-weight: 700;
+    font-size: 55px;
+    padding-bottom: 25px;
+}
+
+.paragraph2 {
+    color: var(--color7);
+    font-size: 20px;
+    padding-bottom: 25px;
+}
+
+.title3 {
+    color: var(--color6);
+    font-weight: 700;
+    font-size: 55px;
+    padding-bottom: 25px;
+}
+
+.paragraph3 {
+    color: var(--color7);
+    font-size: 20px;
+    padding-bottom: 25px;
+}
+
+#button {
+    background-color: var(--header);
+    color: var(--color2);
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    height: 50px;
+    width: 150px;
+    border: 1px solid var(--color3);
+}
+
+#button:hover {
+    background-color: var(--color3);
+}
+
+section {
+    width: 80%;
+    margin: auto;
+
+}
+
+.subHeading {
+    color: var(--color2);
+}
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    width: 80%;
+    margin: auto;
+    line-height: 25px;
+    padding-top: 55px;
+    color: var(--textcolor);
+}
+
+.line {
+    color: var(--textcolor);
+}
+
+.Heading {
+    color: var(--textcolor);
+}
+
+.navLogo {
+    color: black;
+
+}
+
+.caroselItem {
+    border-radius: 45px;
+    overflow: hidden;
+}
+
+.cardButton {
+    position: sticky;
+}
+
+.signUp {
+    height: 35px;
+    width: 100px;
+    background-color: rgb(249, 245, 226);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    color: red;
+    border: 1px solid black;
+    font-weight: 500;
+    padding-top: 4px;
+}
+
+.signUp:hover {
+    background-color: rgb(241, 213, 180);
+}
+
+.cart1 {
+    color: var(--search);
+}
+
+.cart2 {
+    color: var(--search);
+
+}
+
+/* Tablets */
+/* Tablets */
+@media (min-width: 768px) {
+  section {
+    width: 90%;
+  }
+
+  .about {
+    grid-template-columns: repeat(3, 1fr);  /* your 3‑column text */
+    width: 80%;
+  }
+
+  .title1,
+  .title2,
+  .title3 {
+    font-size: 42px;
+  }
+
+  .paragraph1,
+  .paragraph2,
+  .paragraph3 {
+    font-size: 18px;
+  }
+
+  #button {
+    width: 180px;
+  }
+}
+
+/* Desktop / large */
+@media (min-width: 1024px) {
+  section {
+    width: 80%;
+  }
+
+  .about {
+    gap: 20px;
+  }
+
+  .title1,
+  .title2,
+  .title3 {
+    font-size: 55px;  /* your current size */
+  }
+
+  .paragraph1,
+  .paragraph2,
+  .paragraph3 {
+    font-size: 20px;
+  }
+}

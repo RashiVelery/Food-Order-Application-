@@ -1,0 +1,66 @@
+:root {
+  --textcolor: black;
+}
+
+.cart1 img {
+  height: 100px;
+  width: 100px;
+  border-radius: 10px;
+}
+
+.cartContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+
+}
+
+.cart2 {
+  margin-left: auto;
+  /* push this block to the right */
+  text-align: right;
+  /* align text inside to the right */
+}
+
+.cartButtons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart1 {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.cart2 p {
+  margin: 0 0 4px 0;
+}
+
+.qtyRow {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.qtyValue {
+  min-width: 24px;
+  text-align: center;
+}
+
+.qtyBtn {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #f5f5f5;
+  cursor: pointer;
+  color: black;
+}
+
+.cartButtons {
+  gap: 10px;
+}
