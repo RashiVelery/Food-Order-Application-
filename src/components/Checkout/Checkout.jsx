@@ -47,7 +47,12 @@ function Checkout() {
 
     // optional: auto-hide after 3s
     setTimeout(() => setShowSuccess(false), 3000);
+    
   };
+  const redirectToHome =()=> {
+    setShowSuccess(false)
+    navigate('/')
+  }
 
 
   return (
@@ -150,7 +155,7 @@ function Checkout() {
               <p className="success-total">Total: ₹{totalAmount}</p>
               <button
                 className="btn-primary"
-                onClick={() => setShowSuccess(false)}
+                onClick={redirectToHome}
               >
                 OK
               </button>

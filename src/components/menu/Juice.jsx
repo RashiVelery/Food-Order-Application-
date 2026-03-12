@@ -56,7 +56,6 @@ function Juice() {
                         return (
                             <>
                                 <Container items={juice} key={index} />
-
                             </>
                         )
 

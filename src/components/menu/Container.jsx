@@ -12,10 +12,23 @@ function Container(props) {
 
     const navigate = useNavigate()
     const handleOrderNow = () => {
-    navigate(`/menu/${props.items.id}`);
-    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
-  };
+        navigate(`/menu/${props.items.id}`);
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    };
 
+    const handleAddToCart = (item) => {
+
+        const user = JSON.parse(localStorage.getItem("authUser"))
+
+        if (!user) {
+            alert("Please login to add items to cart")
+            navigate("/")
+            return
+        }
+
+        dispatch(AddProductToCart(item))
+
+    }
 
     return (
         <div>
@@ -32,15 +45,15 @@ function Container(props) {
 
                     <Button onClick={handleOrderNow}>View</Button><br />
                     <br />
-                    <Button variant="primary" className='cardButton' onClick={() => dispatch(AddProductToCart({
-                        id:props.items.id,
-                        name: props.items.title,
-                        price: props.items.price,
-                        image: props.items.image,
-                        quantity: 1,
-                    }))}>Add</Button>
-
-                    
+                    <Button variant="primary" className='cardButton' onClick={() =>
+                        handleAddToCart({
+                            id: props.items.id,
+                            name: props.items.title,
+                            price: Number(props.items.price),
+                            image: props.items.image,
+                            quantity: 1
+                        })
+                    }>Add</Button>
                 </Card.Body>
             </Card>
         </div>

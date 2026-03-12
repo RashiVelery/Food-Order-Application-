@@ -53,6 +53,41 @@
   padding: 20px;
 }
 
+/* --------------------- */
+
+
+
+.products-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.products-table th {
+  text-align: left;
+  padding: 12px;
+  background: #f3f4f6;
+  font-weight: 600;
+}
+
+.products-table td {
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.delete-btn {
+  background: #ef4444;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: #b91c1c;
+}
+
 /* responsive */
 @media (max-width: 768px) {
   .admin-layout {
@@ -70,4 +105,59 @@
     flex-wrap: wrap;
     gap: 6px;
   }
+}
+
+/* Admin Order */
+.orders-container {
+  padding: 40px;
+}
+
+.orders-container h1 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.orders-table th {
+  text-align: left;
+  padding: 14px;
+  background: #f3f4f6;
+  font-weight: 600;
+}
+
+.orders-table td {
+  padding: 14px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.orders-table tr:hover {
+  background: #f9fafb;
+}
+
+.orders-table select {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.orders-table button {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.orders-table button:hover {
+  background: #b91c1c;
 }

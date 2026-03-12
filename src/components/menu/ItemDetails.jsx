@@ -16,6 +16,8 @@ const allProducts = [
 ];
 
 function ItemDetails() {
+
+
     const { id } = useParams();            // id from URL /menu/:id
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -33,16 +35,20 @@ function ItemDetails() {
     }
 
     // When user clicks Add to Cart
-    const handleAddToCart = () => {
-        dispatch(
-            AddProductToCart({
-                name: product.title,             // cart uses "name"
-                price: Number(product.price),    // numeric price
-                image: product.image,
-                totalPrice: Number(product.price) // quantity 1 => price
-            })
-        );
-    };
+   
+    const handleAddToCart = (item) => {
+
+        const user = JSON.parse(localStorage.getItem("authUser"))
+
+        if (!user) {
+            alert("Please login to add items to cart")
+            navigate("/")
+            return
+        }
+
+        dispatch(AddProductToCart(item))
+
+    }
 
     return (
         <section>

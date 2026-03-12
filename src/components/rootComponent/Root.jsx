@@ -3,6 +3,8 @@ import { Outlet, useLocation, useNavigate } from 'react-router-dom'
 import './root.css';
 import { useDispatch, useSelector } from 'react-redux';
 import Login from '../Login/Login';
+import { clearCart } from '../../features/cart/cartSlice';
+
 
 
 
@@ -12,6 +14,8 @@ function Root() {
 
 
     const navigate = useNavigate();
+    const dispatch = useDispatch()
+
     const location = useLocation();
 
     const activePath = location.pathname
@@ -27,7 +31,7 @@ function Root() {
         setDarkmode(!darkmode)
     }
 
-   
+
 
     useEffect(() => {
 
@@ -56,6 +60,22 @@ function Root() {
 
     const [showLogin, setShowLogin] = useState(false)
 
+
+    const handleLogout = () => {
+
+        const user = localStorage.getItem("authUser")
+
+        if (!user) {
+            alert("You are already logged out")
+            return
+        }
+
+        localStorage.removeItem("authUser")
+
+        alert("Logged out successfully")
+
+
+    }
 
     return (
         <  >
@@ -137,6 +157,10 @@ function Root() {
                                 <div className='signUp' onClick={() => setShowLogin(true)}>
                                     Sign up
                                 </div>
+                                <button onClick={handleLogout}>
+                                    Logout
+                                </button>
+
 
                             </div>
                         </div>
@@ -219,7 +243,7 @@ function Root() {
                     <div>
                         <p className='text-center text-[#black] text-[12px] p-[10px]'>
                             &copy; Copyright 2025 . All right reserved.
-                            <span onClick={() => navigate("/admin")} className='underline' >Go to Admin panal</span>
+                            
                         </p>
                     </div>
 

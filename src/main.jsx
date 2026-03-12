@@ -20,6 +20,7 @@ import AdminLayout from "./Admin/AdminLayout.jsx";
 import AdminDashboard from "./Admin/AdminDashboard.jsx";
 import AdminOrders from "./Admin/AdminOrders.jsx";
 import AdminProducts from "./Admin/AdminProducts.jsx";
+import ProtectedRoute from "./components/menu/ProtectedRoute.jsx";
 
 
 const router = createBrowserRouter([
@@ -38,7 +39,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/admin",
-    element: <AdminLayout />,   // new layout, not Root
+    element: (
+      <ProtectedRoute role="admin">
+        <AdminLayout />
+      </ProtectedRoute>
+    ),   // new layout, not Root
     children: [
       { index: true, element: <AdminDashboard /> },   // /admin
       { path: "products", element: <AdminProducts /> }, // /admin/products
